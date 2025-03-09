@@ -17,7 +17,7 @@ function Workout(){
         e.preventDefault()
         const user={wname,duration,sets,repl,wcategory,cburn,uid}
         console.log(user)
-        var response=await fetch('http://localhost:4000/wroute',{
+        var response=await fetch('https://fitness-meter.onrender.com/wroute',{
             method:'POST',
             body:JSON.stringify(user),
             headers:{

@@ -16,7 +16,7 @@ function Signup(){
         e.preventDefault()
         const user={Name,Number,Email,Password,Dob,Gender,Country}
         console.log(user)
-        var response=await fetch('http://localhost:4000/user',{
+        var response=await fetch('https://fitness-meter.onrender.com/user',{
             method:'POST',
             body:JSON.stringify(user),
             headers:{

@@ -68,7 +68,7 @@ function Home(){
                     <h1>Push your limit</h1>
                     <p>Hit milestones and PR’s by taking on 
                         <br />a new challenge every month.</p>
-                        <button className='btn btn-dark w-25'>Join a Challenge</button>
+                        <button className='btn btn-dark '>Join a Challenge</button>
                 </div>
             </div>
             <div className="row justify-content-center py-10">

@@ -19,7 +19,7 @@ function Getmem(){
         const user={amt,Number,Email,age,weight,Gender,mtype,tid}
         console.log(user)
         
-        var response=await fetch('http://localhost:4000/mport',{
+        var response=await fetch('https://fitness-meter.onrender.com/mport',{
             method:'POST',
             body:JSON.stringify(user),
             headers:{

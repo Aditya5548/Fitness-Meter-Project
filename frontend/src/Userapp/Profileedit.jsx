@@ -19,7 +19,7 @@ function Profileedit(){
         }
 
     let getdata=async()=>{
-        const response=await fetch(`http://localhost:4000/user/${localStorage.getItem('user')}`);
+        const response=await fetch(`https://fitness-meter.onrender.com/user/${localStorage.getItem('user')}`);
         const result= await response.json();
         console.log(result)
         setName(result.name)

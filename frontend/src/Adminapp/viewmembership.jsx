@@ -13,7 +13,7 @@ function viewmembership(){
     
     const Viewall=async ()=>{
 
-        const response=await fetch('http://localhost:4000/Membershipdata');
+        const response=await fetch('https://fitness-meter.onrender.com/Membershipdata');
         const result= await response.json();
         if(response.ok){
             setData(result.user)
@@ -36,7 +36,7 @@ function viewmembership(){
 
         }
         console.log(s)
-        const response=await fetch(`http://localhost:4000/Membershipdata/${id}/${s}`,{
+        const response=await fetch(`https://fitness-meter.onrender.com/Membershipdata/${id}/${s}`,{
             method:'PATCH',
             headers:{'Content-Type':'application/json'},
         })

@@ -11,7 +11,7 @@ function Adprofile(){
     var id=localStorage.getItem('Admin')
     
     var ekuser=async()=>{
-        var response=await fetch(`http://localhost:4000/Aduser/${id}`)
+        var response=await fetch(`https://fitness-meter.onrender.com/Aduser/${id}`)
         var result= await response.json()
         console.log(result)
         if(response.ok)

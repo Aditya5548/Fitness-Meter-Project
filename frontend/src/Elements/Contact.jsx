@@ -26,7 +26,7 @@ function Contact(){
         e.preventDefault()
         const user={uid,name,email,topic,message}
         console.log(user)
-        var response=await fetch('http://localhost:4000/contact',{
+        var response=await fetch('https://fitness-meter.onrender.com/contact',{
             method:'POST',
             body:JSON.stringify(user),
             headers:{

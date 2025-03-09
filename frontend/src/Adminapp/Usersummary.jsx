@@ -15,23 +15,23 @@ function Membership(){
 
     async function getalldata(){
         
-        const response1=await fetch('http://localhost:4000/user');
+        const response1=await fetch('https://fitness-meter.onrender.com/user');
         const result1=await response1.json();
         setU(result1.length)
 
-        const response2=await fetch('http://localhost:4000/Membershipdata');
+        const response2=await fetch('https://fitness-meter.onrender.com/Membershipdata');
         const result2=await response2.json();
         setM(result2.user.length)
         
-        const response3=await fetch('http://localhost:4000/Workoutdata');
+        const response3=await fetch('https://fitness-meter.onrender.com/Workoutdata');
         const result3=await response3.json();
         setW(result3.user.length)
 
-        const response4=await fetch('http://localhost:4000/feedback');
+        const response4=await fetch('https://fitness-meter.onrender.com/feedback');
         const result4=await response4.json();
         setF(result4.length)
 
-        const response=await fetch('http://localhost:4000/contactdata');
+        const response=await fetch('https://fitness-meter.onrender.com/contactdata');
         const result5= await response.json();
         setC(result5.length)
 

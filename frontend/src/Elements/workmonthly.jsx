@@ -1,8 +1,5 @@
-import e from 'cors';
 import React, { useEffect ,useState} from 'react';
 import { useNavigate } from 'react-router-dom'
-import SidebarUser from './SidebarUser';
-
 function workmonthly(){
     var [pushup,setPushup]=useState()
     var [pullup,setPullup]=useState()
@@ -42,23 +39,23 @@ function workmonthly(){
 
     const Viewall=async ()=>{
         //push-up
-        const pushupdata=await fetch(`http://localhost:4000/Wmonth/${localStorage.getItem('user')}/Push-Up`);
+        const pushupdata=await fetch(`https://fitness-meter.onrender.com/Wmonth/${localStorage.getItem('user')}/Push-Up`);
         const result1= await pushupdata.json();
 
         //pull-up
-        const pullup=await fetch(`http://localhost:4000/Wmonth/${localStorage.getItem('user')}/Pull-Up`);
+        const pullup=await fetch(`https://fitness-meter.onrender.com/Wmonth/${localStorage.getItem('user')}/Pull-Up`);
         const result2= await pullup.json();
 
         //pull-up
-        const Hamercut=await fetch(`http://localhost:4000/Wmonth/${localStorage.getItem('user')}/Hamercut`);
+        const Hamercut=await fetch(`https://fitness-meter.onrender.com/Wmonth/${localStorage.getItem('user')}/Hamercut`);
         const result3= await Hamercut.json();
 
         //situp
-        const situp=await fetch(`http://localhost:4000/Wmonth/${localStorage.getItem('user')}/Situp`);
+        const situp=await fetch(`https://fitness-meter.onrender.com/Wmonth/${localStorage.getItem('user')}/Situp`);
         const result4= await situp.json();
         
         //Bench Press
-        const Benchpress=await fetch(`http://localhost:4000/Wmonth/${localStorage.getItem('user')}/Bench-press`);
+        const Benchpress=await fetch(`https://fitness-meter.onrender.com/Wmonth/${localStorage.getItem('user')}/Bench-press`);
         const result5= await Benchpress.json();
 
 

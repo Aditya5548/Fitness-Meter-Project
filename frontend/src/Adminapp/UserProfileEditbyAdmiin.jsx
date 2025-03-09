@@ -18,7 +18,7 @@ function UserProfileEditbyAdmiin(){
         }
 
     let getdata=async()=>{
-        const response=await fetch(`http://localhost:4000/user/${localStorage.getItem('edit')}`);
+        const response=await fetch(`https://fitness-meter.onrender.com/${localStorage.getItem('edit')}`);
         const result= await response.json();
         console.log(result)
         setName(result.name)
@@ -33,7 +33,7 @@ function UserProfileEditbyAdmiin(){
         e.preventDefault()
         const _id=localStorage.getItem('edit')
         const user={_id,Name,Number,Email,Password,Dob,Gender,Country}
-        const response=await fetch(`http://localhost:4000/user/${localStorage.getItem('edit')}`,{
+        const response=await fetch(`https://fitness-meter.onrender.com/${localStorage.getItem('edit')}`,{
             method:'PATCH',
             headers:{'Content-Type':'application/json'},
             body:JSON.stringify(user)

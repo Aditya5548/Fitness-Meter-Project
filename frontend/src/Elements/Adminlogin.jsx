@@ -27,7 +27,7 @@ function Adminlogin(){
         e.preventDefault()
         const user={email,password}
         console.log(user)
-        var response=await fetch('http://localhost:4000/Adminlog',{
+        var response=await fetch('https://fitness-meter.onrender.com/Adminlog',{
             method:'POST',
             body:JSON.stringify(user),
             headers:{

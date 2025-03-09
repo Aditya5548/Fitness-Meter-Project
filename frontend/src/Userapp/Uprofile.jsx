@@ -12,7 +12,7 @@ function Uprofile(){
     var id=localStorage.getItem('user')
     
     const Viewall=async ()=>{
-        const response=await fetch(`http://localhost:4000/user/${id}`);
+        const response=await fetch(`https://fitness-meter.onrender.com/user/${id}`);
         const result= await response.json();
         console.log(result)
         
