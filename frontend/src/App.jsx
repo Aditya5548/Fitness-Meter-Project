@@ -8,7 +8,7 @@ import Adminlogin from './Elements/Adminlogin'
 import Addash from './Adminapp/Addash'
 import Notfound from './Mainapp/notfound'
 import Viewuser from './Adminapp/Viewuser'
-import { BrowserRouter,Route,Routes } from 'react-router-dom'
+import { HashRouter,Route,Routes } from 'react-router-dom'
 import Adprofile from './Adminapp/Adprofile'
 import Uprofile from './Userapp/Uprofile'
 import Addfeed from './Userapp/AddFeed'
@@ -33,7 +33,7 @@ function App() {
     {/*outer start*/}
     <div className="container-fluid">
    
-    <BrowserRouter>
+    <HashRouter>
     <Routes>
       <Route path='/' element={<Home/>} />
       <Route path='/Raoutes' element={<Raoutes/>} />
@@ -70,7 +70,7 @@ function App() {
 
       
     </Routes> 
-    </BrowserRouter>
+    </HashRouter>
 
     </div>
     {/*outer end */}
