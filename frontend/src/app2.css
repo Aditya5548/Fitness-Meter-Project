@@ -1,0 +1,93 @@
+.pphoto{
+    width: 250px;
+    height: 300px;
+}
+.tableclass{
+    width: 100%;
+}
+
+.profilephoto{
+    width: 350px;
+    height: 330px;
+    text-align: center;
+    padding: 20px;
+}
+.profiledetail{
+    text-align: start;
+    width: 400px;
+    background-color: rgb(160, 160, 160);
+    padding: 20px;
+    border-radius: 10%;
+}
+
+.verified{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.verifiedbtn{
+    text-align: end;
+}
+
+.workoutdata{
+    background-color: rgb(233, 233, 233);
+    border-radius: 2%;
+    margin-top: 20px;
+
+}
+
+
+.workoutname{
+    background-color: white;
+    width: 300px;
+    height: 50px;
+    border: solid gainsboro;
+}
+.workoutnameinput{
+    background-color: white;
+    border: solid gainsboro;
+    height: 300px;
+}
+
+.sidebaroption{
+    font-size: large;
+    color: white;
+
+}
+.sidebaroption li{
+    border-radius: 10%;   
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .tablefixed{
+    max-height: 90%;
+    overflow-y: scroll;
+    overflow-x: scroll;
+  }
+
+  .footter{
+    background-color: black;
+    color: white;
+    padding: 15px 0 25px 0;
+    font-size: 15px;
+    text-align: center;
+  }
+ 

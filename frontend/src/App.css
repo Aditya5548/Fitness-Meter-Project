@@ -1,0 +1,232 @@
+html,body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.simg{
+    width: 100%;
+    height: 350px;
+}
+.imgsize{
+    height: 50px;
+    width: 70px;
+}
+.loginsign{
+    background-color: rgb(61, 61, 61);
+    list-style: none;
+}
+.loginsignin{
+    color: white;
+}
+
+
+
+#navbarToggle
+{   justify-content: end;
+    padding: 5px 20px 5px 20px;
+}
+
+#navbarcss
+{ 
+    align-items: center;
+    
+}
+#myNavbar{
+    padding: 5px 20px 5px 20px;
+}
+
+#navbarcss li a
+{color:white;
+}
+
+#navbarcss li a:hover
+{
+border-bottom: 2px solid rgb(255, 0, 0);
+padding:-5px 0 0 0;
+}
+
+.loginsignup{
+    background-color: red; 
+    padding:2px 20px 2px 20px;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: large;
+    margin-left: 20px;
+}
+.dashboardsigninsize{
+    height: 300px;
+    text-align: center;
+}
+
+.dashboardsignin{
+    
+    background-image: url('./assets/login.jpg');
+    background-size: cover;
+    height: 300px;
+}
+
+
+.sdiv{
+    position: relative;
+}
+
+.sdiv>div{
+    position: absolute;
+    padding: 100px 0px 100px 0;
+    width: 75%;
+    color: white;
+    text-align: right;
+    right: 15vw;
+
+}
+.sdiv>div>h1{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.signinbg{
+    background-color: rgb(216, 213, 213);
+    border-radius: 5px;
+    margin-top: 15px;
+    padding: 35px 5px 15px 5px ;
+}
+
+.banner{
+    background-image: url(./assets/pic5.jpg);
+}
+
+.nofound
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    width: 100%;
+
+}
+.nofound>h1{
+    font-size: 10vw;
+}
+.nofound>p{
+    font-size: 5vw;
+}
+.adminlogout{
+    height: 60px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: rgb(49, 45, 45);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btnset{
+    margin: 5px;
+    padding: 10px;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 40%;
+
+}
+
+.btnset2{
+    padding: 0px 30px 5px 30px;
+    margin-right: 30px;
+    font-weight: bolder;
+    background-color: red;
+    border-radius: 10%;
+    border: none;
+    color: white;
+}
+
+#lookup{
+    background-color: red;
+    text-decoration: none;
+    padding: 20px;
+    font-size: large;
+    color: white;
+
+}
+
+.membership{
+    width: 180px;
+    height: 150px;
+    align-self: center;
+}
+
+.membership2{
+    padding-top: 20px;
+    width: 180px;
+    height: 150px;
+    align-self: center;
+}
+
+.memberbtn{
+    align-self: center;
+    padding-bottom: 20px;
+
+}
+.memberbtnin{
+    background-color: red;
+    text-decoration: none;
+    padding: 10px 20px 10px 20px;
+    border: none;
+    font-size: large;
+    color: white;
+    font-weight: bolder;
+    border-radius: 25%;
+}
+.membersize{
+    width: 250px;
+    padding-bottom: 10px;
+
+}
+
+.btnview{
+    color: white;
+    border: none;
+    padding: 15px;
+    font-weight: bold;
+    background-color: black;
+}
+
+.btnview2{
+    color: white;
+    width: 150px;
+    border: none;
+    padding: 5px;
+    font-weight: bold;
+    background-color: rgb(236, 8, 8);
+}
+
+.swapwv{
+    background-color: blue;
+    border: none;
+    width: 200px;
+    margin-top: 10px;
+    padding: 10px;
+    font-weight: bolder;
+    color: white;
+    border-radius: 15%;
+}
+.loginpanel{
+    background-image: url(./assets/jim2.jpeg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.lookup{
+    background-color: rgb(7, 0, 0);
+    text-decoration: none;
+    font-size: x-large;
+    color: white; 
+    padding: 15px 30px 15px 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 10%;
+}
