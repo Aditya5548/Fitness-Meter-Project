@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'
 import Sidebar from '../Elements/Sidebar';
-import Usersummary from './usersummary';
+import Usersummary from './Usersummary';
 function Addash(){
     const navigate=useNavigate()
            //validation start

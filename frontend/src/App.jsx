@@ -8,7 +8,7 @@ import Adminlogin from './Elements/Adminlogin'
 import Addash from './Adminapp/Addash'
 import Notfound from './Mainapp/notfound'
 import Viewuser from './Adminapp/Viewuser'
-import { HashRouter,Route,Routes } from 'react-router-dom'
+import { BrowserRouter,Route,Routes } from 'react-router-dom'
 import Adprofile from './Adminapp/Adprofile'
 import Uprofile from './Userapp/Uprofile'
 import Addfeed from './Userapp/AddFeed'
@@ -27,13 +27,14 @@ import Contactall from './Elements/Contactall'
 import Messageread from './Adminapp/Messageread'
 
 
+
 function App() {
   return (
     <>
     {/*outer start*/}
     <div className="container-fluid">
    
-    <HashRouter>
+    <BrowserRouter>
     <Routes>
       <Route path='/' element={<Home/>} />
       <Route path='/Raoutes' element={<Raoutes/>} />
@@ -68,9 +69,10 @@ function App() {
       <Route path='/Contactall' element={<Contactall/>} />
       <Route path='/Messageread' element={<Messageread/>} />
 
+
       
     </Routes> 
-    </HashRouter>
+    </BrowserRouter>
 
     </div>
     {/*outer end */}

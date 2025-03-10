@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import  img1 from '../assets/Logo.png'
+import  img1 from '../assets/logo.png'
 import { useNavigate } from 'react-router-dom'
 import {Link,} from 'react-router-dom'
 import gsap from 'gsap'
@@ -41,7 +41,7 @@ function Navbar(){
                   ?
                 <>
                 <li className="nav-item loginsignup"><a className="nav-link" href="/SigninDash">LOGIN</a></li>
-                 <li className="nav-item loginsignup"><a className="nav-link" href="Signup">SIGNUP</a></li>
+                 <li className="nav-item loginsignup"><a className="nav-link" href="/Signup">SIGNUP</a></li>
                  </>
                  :
                  <>
