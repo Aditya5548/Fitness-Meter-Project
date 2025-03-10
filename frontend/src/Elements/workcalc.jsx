@@ -1,4 +1,3 @@
-import e from 'cors';
 import React, { useEffect ,useState} from 'react';
 import { useNavigate } from 'react-router-dom'
 import SidebarUser from './SidebarUser';
