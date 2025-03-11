@@ -55,6 +55,8 @@ function Contact(){
     }
 
     return (  <>
+    <div className="container-fluid">
+        <div className="row">
             <SidebarUser />
         <div className="adminlogout">
         <div>
@@ -64,8 +66,9 @@ function Contact(){
           <button className="btnset2" onClick={()=>{localStorage.removeItem('user') ,navigate('/Signin')}}>Logout</button>
         </div>
      </div>
+     </div>
              <div className="row justify-content-center align-items-center my-3">   
-                    <div className=" col-6 col-sm-10 py-5  workoutdata">  
+                    <div className="col-6 py-5 ">  
                         <form action="" onSubmit={regcode} >
                             <center>
                             <h2 className='fw-bold formclass'>Contact US</h2> 
@@ -85,6 +88,7 @@ function Contact(){
                             </center>
                     </form>                     
                     </div>
+                 </div>
                  </div>
                  </>
     );
