@@ -1,5 +1,6 @@
 import React, { useState ,useEffect} from 'react'
 import { useNavigate } from 'react-router-dom'
+import Sidebar from '../Elements/Sidebar';
 function UserProfileEditbyAdmiin(){
     const navigate=useNavigate()
     let [Name , setName]=useState("")
@@ -18,7 +19,7 @@ function UserProfileEditbyAdmiin(){
         }
 
     let getdata=async()=>{
-        const response=await fetch(`https://fitness-meter.onrender.com/${localStorage.getItem('edit')}`);
+        const response=await fetch(`https://fitness-meter.onrender.com/user/${localStorage.getItem('edit')}`);
         const result= await response.json();
         console.log(result)
         setName(result.name)
@@ -33,7 +34,7 @@ function UserProfileEditbyAdmiin(){
         e.preventDefault()
         const _id=localStorage.getItem('edit')
         const user={_id,Name,Number,Email,Password,Dob,Gender,Country}
-        const response=await fetch(`https://fitness-meter.onrender.com/${localStorage.getItem('edit')}`,{
+        const response=await fetch(`https://fitness-meter.onrender.com/user/${localStorage.getItem('edit')}`,{
             method:'PATCH',
             headers:{'Content-Type':'application/json'},
             body:JSON.stringify(user)
@@ -42,6 +43,7 @@ function UserProfileEditbyAdmiin(){
         console.log(result)
         if(result.msg=="updated Successfully..."){
             setMsg(result.msg)
+            window.alert(result.msg)
             setName("")
             setNumber("")
             setEmail("")
@@ -53,6 +55,7 @@ function UserProfileEditbyAdmiin(){
             navigate('/Viewuser')
         }
         else{
+            window.alert(result.msg)
             setName("")
             setNumber("")
             setEmail("")
@@ -67,11 +70,21 @@ function UserProfileEditbyAdmiin(){
       useEffect(()=>{
                     validate()
                     getdata()
+                    userupdate()
         },[])
     return(
         <>
+        <Sidebar />
+     <div className="adminlogout">
+        <div>
+        <button class="btn btn-danger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">≡</button>
+        </div>
+        <div>
+           <button  className="btnset2" onClick={()=>{localStorage.removeItem('Admin'),localStorage.removeItem('adminname'),navigate('/Adminlogin')}}>Logout</button>
+        </div>
+     </div>
         <div  className="row my-5 mx-5">
-            <div  className="col-sm-6 text-center mx-auto signinbg py-5">
+            <div  className="col-sm-11 col-md-6 col-lg-7 text-center mx-auto signinbg py-5">
         <form action="" onSubmit={userupdate} >
         <h5 className='fw-bold '>User ID: {localStorage.getItem('edit')}</h5> 
         
@@ -114,6 +127,7 @@ function UserProfileEditbyAdmiin(){
                 <br/>
             <input type="submit" value="Update User" className='btnview'/>
         </form>
+        
         </div>
         </div>
          </>

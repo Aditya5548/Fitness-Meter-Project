@@ -79,15 +79,13 @@ function Profileedit(){
         <button class="btn btn-danger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">≡</button>
         </div>
         <div>
-           Hey,  {localStorage.getItem('username')}
-           &nbsp;&nbsp;
           <button className="btnset2" onClick={()=>{localStorage.removeItem('user') ,navigate('/Signin')}}>Logout</button>
         </div>
      </div>
         <div  className="row my-5 mx-5">
             <div  className="col-sm-6 text-center mx-auto signinbg py-5">
         <form action="" onSubmit={userupdate} >
-        <h5 className='fw-bold '>User ID: {localStorage.getItem('username')}</h5> 
+        <h5 className='fw-bold '>User Name: {localStorage.getItem('username')}</h5> 
         
             <span className='text-danger'><h4>{msg}</h4></span>
                 <input type="name" id="name" value={Name} onChange={(e)=>{setName(e.target.value)}}   placeholder='Enter Name' className='w-75 text-start shadow-lg workoutname'/>

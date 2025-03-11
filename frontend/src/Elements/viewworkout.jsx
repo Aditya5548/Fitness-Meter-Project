@@ -38,7 +38,7 @@ function Viewworkout(){
     return (
         <div>
             
-            <div className="col-md-8 my-2 mx-auto tablefixed">
+            <div className="col-md-8 col-sm-12 my-2 mx-auto tablefixed">
             <h2 className='text-center bg-danger py-2 text-white'>Today Workout</h2>
             <table className="table table-dark">
                 <thead>

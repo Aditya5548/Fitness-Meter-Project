@@ -48,8 +48,6 @@ function Uprofile(){
         <button class="btn btn-danger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">≡</button>
         </div>
         <div>
-           Hey,  {localStorage.getItem('username')}
-           &nbsp;&nbsp;
           <button className="btnset2" onClick={()=>{localStorage.removeItem('user') ,navigate('/Signin')}}>Logout</button>
         </div>
      </div>
@@ -61,7 +59,7 @@ function Uprofile(){
            </div>
         </div>
         <div className="col-md-4">
-            <div className='profiledetail'>
+            <div className='profiledetail py-2'>
                <h1 className='fw-bold text-center'>User Profile</h1> 
                <b>ID: </b>{id} <br />
                <b>Name: </b>{data.name} <br />

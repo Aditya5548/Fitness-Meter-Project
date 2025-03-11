@@ -45,7 +45,7 @@ function Membership(){
         
         <>
         <div className="row w-100 justify-content-center">
-         <center><h1>Welcome , Admin Portal</h1></center>
+         <center><h1>Welcome,  {localStorage.getItem('adminname')}</h1></center>
   <div className="col-2 membersize">
     <div className="card h-100 ">
       <img src={usertemp} className="card-img-top membership2" alt="..."/>

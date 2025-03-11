@@ -62,8 +62,6 @@ function Addfeed(){
         <button class="btn btn-danger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">≡</button>
         </div>
         <div>
-           Hey,  {localStorage.getItem('username')}
-           &nbsp;&nbsp;
           <button className="btnset2" onClick={()=>{localStorage.removeItem('user') ,navigate('/Signin')}}>Logout</button>
         </div>
      </div>

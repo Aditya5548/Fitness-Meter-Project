@@ -69,8 +69,6 @@ function viewmembership(){
         <button class="btn btn-danger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">≡</button>
         </div>
         <div>
-           Hey,  {localStorage.getItem('adminname')}
-           &nbsp;&nbsp;
            <button  className="btnset2" onClick={()=>{localStorage.removeItem('Admin'),localStorage.removeItem('adminname'),navigate('/Adminlogin')}}>Logout</button>
         </div>
      </div>

@@ -11,6 +11,9 @@ function Sidebar(){
     <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <ul type="none" className='py-4 sidebaroption'>
+      <li className='bg-danger py-3 px-4 m-3'>
+            <Link to="/Addash" className='nav-link'>DashBoard</Link>
+        </li>
     <li className='bg-primary py-3 px-4 m-3'>
         <Link to="/Adprofile" className='nav-link'>Profile </Link>
     </li>

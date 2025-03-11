@@ -64,13 +64,11 @@ const userdel=async(id)=>{
         <button class="btn btn-danger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">≡</button>
         </div>
         <div>
-           Hey,  {localStorage.getItem('adminname')}
-           &nbsp;&nbsp;
            <button  className="btnset2" onClick={()=>{localStorage.removeItem('Admin'),localStorage.removeItem('adminname'),navigate('/Adminlogin')}}>Logout</button>
         </div>
      </div>
      <div className=' py-1 row'>
-        <h3  className='text-center'>All Users</h3>
+        <h3  className='text-center py-2'>All Users</h3>
         <div className="col-sm-9 mx-auto my-1 shadow-lg p-5 rounded-3">
             <table className='table table-dark table-striped-columns  tablefixed'>
                 <thead>
