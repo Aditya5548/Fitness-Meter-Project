@@ -60,7 +60,7 @@ function Addfeed(){
     <div className="row">
      <SidebarUser />
      <div className="adminlogout">
-        <div>
+        <div className='px-3'>
         <button class="btn btn-danger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">≡</button>
         </div>
         <div>
