@@ -68,7 +68,7 @@ function Contact(){
      </div>
      </div>
              <div className="row justify-content-center align-items-center my-3">   
-                    <div className="col-6 py-5 ">  
+                    <div className="col-8 py-5  workoutdata">  
                         <form action="" onSubmit={regcode} >
                             <center>
                             <h2 className='fw-bold formclass'>Contact US</h2> 

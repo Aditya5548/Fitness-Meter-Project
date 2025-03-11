@@ -56,6 +56,8 @@ function Addfeed(){
 
     return (
      <>
+    <div className="container-fluid">
+    <div className="row">
      <SidebarUser />
      <div className="adminlogout">
         <div>
@@ -64,6 +66,7 @@ function Addfeed(){
         <div>
           <button className="btnset2" onClick={()=>{localStorage.removeItem('user') ,navigate('/Signin')}}>Logout</button>
         </div>
+     </div>
      </div>
      <br />
      <div className="row justify-content-center align-items-center">
@@ -88,12 +91,12 @@ function Addfeed(){
                     <option value="Suggestion">Suggestion</option>
                     
                 </select><br /><br />
-                <textarea id="message" value={message} onChange={(e)=>{setMessage(e.target.value)}}  placeholder='Enter Number' rows="4" cols="40" className="workoutname2"/>
+                <textarea id="message" value={message} onChange={(e)=>{setMessage(e.target.value)}}  placeholder='Enter Number' rows="4" className="workoutname2"/>
                 <br /><br />
                 <input type="submit" value="Summit Response" className="btnview"/>
             </center>
         </form>
-            
+            </div>
         </div>
      </div>
      

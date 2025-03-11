@@ -34,6 +34,8 @@ function WComplete(){
 
 
     return (
+        <div className="container-fluid">
+        <div className="row">
         <div>
         <Sidebar />
         <div className="adminlogout">
@@ -46,6 +48,8 @@ function WComplete(){
            <button  className="btnset2" onClick={()=>{localStorage.removeItem('Admin'),localStorage.removeItem('adminname'),navigate('/Adminlogin')}}>Logout</button>
         </div>
      </div> 
+     </div>
+     <div className="row">
             <div className="col-md-10 my-5 mx-auto">
             <center><h2>Today Workout Data</h2></center>
             <h4>{msg}</h4>
@@ -80,8 +84,10 @@ function WComplete(){
                 ))}
                 </tbody>
             </table>
-            
+            </div>
             </div> 
+        </div>
+
         </div>
     );
 }
