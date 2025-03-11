@@ -27,6 +27,7 @@ function Signup(){
         console.log(d)
         if(d.msg){
             setMsg(d.msg)
+            window.alert(d.msg)
             setName("")
             setNumber("")
             setEmail("")
@@ -37,6 +38,7 @@ function Signup(){
             //navigate("/Signin")
         }
         else{
+            window.alert(d.msg)
             setName("")
             setNumber("")
             setEmail("")

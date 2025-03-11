@@ -175,6 +175,8 @@ function workcalc(){
 
     return (
      <>
+        <div className="container-fluid">
+         <div className="row">
           <SidebarUser />
      <div className="adminlogout">
         <div>
@@ -184,8 +186,9 @@ function workcalc(){
           <button className="btnset2" onClick={()=>{localStorage.removeItem('user'),localStorage.removeItem('username'),navigate('/Signin')}}>Logout</button>
         </div>
      </div>
+     </div>
      <div className='row my-5'>
-        <div className="col-sm-9 mx-auto shadow-lg rounded-3">
+        <div className="col-sm-9 mx-auto shadow-lg rounded-3 tablefixed">
             <h2  className='text-center'>Your Complete Workout</h2>
             <table className='table table-dark table-striped-columns'>
                 <thead>
@@ -239,11 +242,12 @@ function workcalc(){
             </table>
         </div>
 
-        <div className="col-sm-9 mx-auto shadow-lg rounded-3">
+        <div className="col-sm-9 mx-auto shadow-lg rounded-3 tablefixed">
             <Workmonthly/>
         
         </div>  
-       </div>   
+       </div> 
+       </div>  
      </>
     );
 }

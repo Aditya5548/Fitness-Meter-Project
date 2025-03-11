@@ -44,6 +44,7 @@ function Signin(){
         }
         else{
             setMsg(d.msg)
+            window.alert(d.msg)
             setEmail("")
             setPassword("")
          }
