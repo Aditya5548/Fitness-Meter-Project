@@ -40,7 +40,11 @@ function Contactall(){
     }
 
     return (  <>
+            <div className="container-fluid">
+            <div className="row">
+
                 <Navbar />
+            </div>
              <div className="row justify-content-center align-items-center my-5 py-5">   
                     <div className="col-sm-6 col-md-6 col-sm-6 py-5  workoutdata">  
                         <form action="" onSubmit={regcode} >
@@ -62,6 +66,7 @@ function Contactall(){
                             </center>
                     </form>                     
                     </div>
+                 </div>
                  </div>
                  </>
     );
