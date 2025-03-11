@@ -1,4 +1,5 @@
 import React, { useEffect ,useState } from 'react';
+import Navbar from './Navbar';
 function Contactall(){
 
     let [name , setName]=useState("")
@@ -39,8 +40,9 @@ function Contactall(){
     }
 
     return (  <>
-             <div className="row justify-content-center align-items-center my-3">   
-                    <div className="col-md-6 py-5  workoutdata">  
+                <Navbar />
+             <div className="row justify-content-center align-items-center my-5 py-5">   
+                    <div className="col-sm-6 col-md-6 col-sm-6 py-5  workoutdata">  
                         <form action="" onSubmit={regcode} >
                             <center>
                             <h2 className='fw-bold formclass'>Contact US</h2> 

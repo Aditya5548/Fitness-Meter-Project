@@ -185,7 +185,7 @@ userRoute.post('/contact',async(req,res)=>{
                 <b>Message: <b/>${body.message}
                 `
                 //sending Verification mail
-                main(body.email,"MusleMeter Contact",sub)
+                main(body.email,"Fitness-Meter Contact",sub)
                 //received to user before msg==success
                 return res.status(200).json({"msg":"Success"})
 

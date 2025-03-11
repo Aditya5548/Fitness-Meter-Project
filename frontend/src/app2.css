@@ -7,14 +7,14 @@
 }
 
 .profilephoto{
-    width: 350px;
+    width: 300px;
     height: 330px;
     text-align: center;
     padding: 20px;
 }
 .profiledetail{
     text-align: start;
-    width: 400px;
+    width: 350px;
     background-color: rgb(160, 160, 160);
     padding: 20px;
     border-radius: 10%;

@@ -58,8 +58,8 @@ function Uprofile(){
             <img src={usertemp} alt="" className='pphoto' />
            </div>
         </div>
-        <div className="col-md-4">
-            <div className='profiledetail py-2'>
+        <div className="col-md-4 ">
+            <div className='profiledetail py-3'>
                <h1 className='fw-bold text-center'>User Profile</h1> 
                <b>ID: </b>{id} <br />
                <b>Name: </b>{data.name} <br />
