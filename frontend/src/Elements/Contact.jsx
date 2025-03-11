@@ -64,21 +64,21 @@ function Contact(){
           <button className="btnset2" onClick={()=>{localStorage.removeItem('user') ,navigate('/Signin')}}>Logout</button>
         </div>
      </div>
-             <div className="row justify-content-center align-items-center my-3 Contactus">   
-                    <div className=" col-sm-6 col-md-6 py-5  workoutdata">  
+             <div className="row justify-content-center align-items-center my-3">   
+                    <div className=" col-6 col-sm-10 py-5  workoutdata">  
                         <form action="" onSubmit={regcode} >
                             <center>
                             <h2 className='fw-bold formclass'>Contact US</h2> 
                             <br />
                             <span className='text-danger'><h4>{msg}</h4></span>
                             <br />
-                            <input type="name" value={name} onChange={(e)=>{setName(e.target.value)}}  placeholder='Enter Your Name' className='w-50 text-start shadow-lg workoutname'/>
+                            <input type="name" value={name} onChange={(e)=>{setName(e.target.value)}}  placeholder='Enter Your Name' className='w-75 text-start shadow-lg workoutname'/>
                             <br /><br />                            
-                            <input type="email" value={email} onChange={(e)=>{setEmail(e.target.value)}}  placeholder='Enter Your Email' className='w-50 text-start workoutname'/>
+                            <input type="email" value={email} onChange={(e)=>{setEmail(e.target.value)}}  placeholder='Enter Your Email' className='w-75 text-start workoutname'/>
                             <br /><br />
-                            <input type="text" value={topic} onChange={(e)=>{setTopic(e.target.value)}}  placeholder='Topic' className='w-50 text-start workoutname'/>
+                            <input type="text" value={topic} onChange={(e)=>{setTopic(e.target.value)}}  placeholder='Topic' className='w-75 text-start workoutname'/>
                             <br /><br />
-                            <textarea id="message" value={message} onChange={(e)=>{setMessage(e.target.value)}}  placeholder='Message' rows="4" className="w-50 workoutname2"/>
+                            <textarea id="message" value={message} onChange={(e)=>{setMessage(e.target.value)}}  placeholder='Message' rows="4" className="w-75 workoutname2"/>
                             <br /><br />
                             
                             <input type="submit" value="Summit Data" className='btnview'/>
