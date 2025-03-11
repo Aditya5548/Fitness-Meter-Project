@@ -84,7 +84,7 @@ function UserProfileEditbyAdmiin(){
         </div>
      </div>
         <div  className="row my-5 mx-5">
-            <div  className="col-sm-11 col-md-6 col-lg-7 text-center mx-auto signinbg py-5">
+            <div  className="col-sm-12 col-md-6 col-lg-7 text-center mx-auto signinbg py-5">
         <form action="" onSubmit={userupdate} >
         <h5 className='fw-bold '>User ID: {localStorage.getItem('edit')}</h5> 
         

@@ -36,6 +36,8 @@ function Viewfeed(){
 
     return (
      <>
+        <div className="container-fluid">
+            <div className="row">
      <Sidebar />
      <div className="adminlogout">
         <div>
@@ -45,10 +47,11 @@ function Viewfeed(){
            <button  className="btnset2" onClick={()=>{localStorage.removeItem('Admin'),localStorage.removeItem('adminname'),navigate('/Adminlogin')}}>Logout</button>
         </div>
      </div>
+     </div>
     
      <div className=' py-3 row'>
         <h3  className='text-center'>All Users #lec30</h3>
-        <div className="col-sm-9 mx-auto my-4 shadow-lg p-5 rounded-3">
+        <div className="col-sm-9 mx-auto my-4 shadow-lg p-5 rounded-3 tablefixed">
             <table className='table table-dark table-striped-columns'>
                 <thead>
                 <tr className='py-2 text-center'>
@@ -76,6 +79,7 @@ function Viewfeed(){
             </table>
             <p className='text-center'><Link className='btn btn-secondary my-1 mx-1 0' to={`/Addash/`}> Go Back</Link> </p>
         </div>
+       </div>
        </div>
      
        

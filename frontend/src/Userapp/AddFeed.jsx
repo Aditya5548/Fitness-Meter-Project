@@ -71,7 +71,7 @@ function Addfeed(){
      <br />
      <div className="row justify-content-center align-items-center">
         <div className="col-md-4 ">
-        <img src={feed1} alt="" className='w-100 shadow-lg p-2 rounded-5'/>
+        <img src={feed1} alt="" className='w-75 shadow-lg p-2 rounded-5'/>
         </div>
         <div className="col-md-4 py-5">  
             <form action="" onSubmit={regcode} >
@@ -91,7 +91,7 @@ function Addfeed(){
                     <option value="Suggestion">Suggestion</option>
                     
                 </select><br /><br />
-                <textarea id="message" value={message} onChange={(e)=>{setMessage(e.target.value)}}  placeholder='Enter Number' rows="4" className="workoutname2"/>
+                <textarea id="message" value={message} onChange={(e)=>{setMessage(e.target.value)}}  placeholder='Enter Number' rows="4" className="w-75 shadow-lg workoutname2"/>
                 <br /><br />
                 <input type="submit" value="Summit Response" className="btnview"/>
             </center>

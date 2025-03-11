@@ -34,7 +34,7 @@ function Profileedit(){
         e.preventDefault()
         const _id=localStorage.getItem('user')
         const user={_id,Name,Number,Email,Password,Dob,Gender,Country}
-        const response=await fetch(`http://localhost:4000/user/${localStorage.getItem('user')}`,{
+        const response=await fetch(`https://fitness-meter.onrender.com/user/${localStorage.getItem('user')}`,{
             method:'PATCH',
             headers:{'Content-Type':'application/json'},
             body:JSON.stringify(user)

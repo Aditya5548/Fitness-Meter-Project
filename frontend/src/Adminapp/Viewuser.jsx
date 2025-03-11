@@ -58,19 +58,22 @@ const userdel=async(id)=>{
 
     return (
      <>
+    <div className="container-fluid">
+         <div className="row">
      <Sidebar />  
         <div className="adminlogout">
-        <div>
+        <div className='px-2'>
         <button class="btn btn-danger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">≡</button>
         </div>
         <div>
            <button  className="btnset2" onClick={()=>{localStorage.removeItem('Admin'),localStorage.removeItem('adminname'),navigate('/Adminlogin')}}>Logout</button>
         </div>
      </div>
+     </div>
      <div className=' py-1 row'>
         <h3  className='text-center py-2'>All Users</h3>
-        <div className="col-sm-9 mx-auto my-1 shadow-lg p-5 rounded-3">
-            <table className='table table-dark table-striped-columns  tablefixed'>
+        <div className="col-sm-9 mx-auto my-1 shadow-lg p-5 rounded-3 tablefixed">
+            <table className='table table-dark table-striped-columns'>
                 <thead>
                 <tr className='py-2 text-center'>
                     <th>Name</th>
@@ -105,6 +108,7 @@ const userdel=async(id)=>{
             </table>
             <p className='text-center'><Link className='btn btn-secondary my-1 mx-1 0' to={`/Addash`}> Go Back</Link> </p>
         </div>
+       </div>
        </div>
      
        

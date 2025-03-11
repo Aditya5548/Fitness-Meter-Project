@@ -39,7 +39,7 @@ function WComplete(){
         <div>
         <Sidebar />
         <div className="adminlogout">
-        <div>
+        <div className='px-2'>
         <button class="btn btn-danger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">≡</button>
         </div>
         <div>
@@ -50,7 +50,7 @@ function WComplete(){
      </div> 
      </div>
      <div className="row">
-            <div className="col-md-10 my-5 mx-auto">
+            <div className="col-md-10 my-5 mx-auto tablefixed">
             <center><h2>Today Workout Data</h2></center>
             <h4>{msg}</h4>
             <table className="table table-dark">
