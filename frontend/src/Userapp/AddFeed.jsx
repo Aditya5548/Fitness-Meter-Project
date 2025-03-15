@@ -71,7 +71,7 @@ function Addfeed(){
      <br />
      <div className="row justify-content-center align-items-center">
         <div className="col-md-4 ">
-        <img src={feed1} alt="" className='w-75 shadow-lg p-2 rounded-5'/>
+        <img src={feed1} alt="" className='w-75 shadow-lg p-2 rounded-5 align-items-center'/>
         </div>
         <div className="col-md-4 py-5">  
             <form action="" onSubmit={regcode} >
