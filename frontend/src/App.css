@@ -49,9 +49,8 @@ padding:-5px 0 0 0;
     background-color: red; 
     padding:2px 20px 2px 20px;
     border-radius: 5px;
-    margin-top: 5px;
+    margin: 5px;
     font-size: large;
-    margin-left: 20px;
 }
 .dashboardsigninsize{
     height: 300px;
