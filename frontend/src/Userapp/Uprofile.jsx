@@ -66,7 +66,6 @@ function Uprofile(){
                <b>Gender: </b>{data.gender} <br />
                <b>Dob: </b>{data.dob} <br />
                <b>Email: </b>{data.email} <br />
-               <b>Age: </b>{data.number} <br />
                <b>Country: </b>{data.country} <br />
                <b>Password: </b>{data.password}  <br />     
                <div className='btnset'> <Link to="/Profileedit" className='memberbtnin'>Update</Link>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <Link to="" className='memberbtnin'>Delete</Link> </div> 

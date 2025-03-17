@@ -12,6 +12,7 @@ function Udash(){
     const [mvalid,SetMvalid]=useState()
     const navigate=useNavigate()
     const [x,setX]=useState(true)
+    const [m,setM]=useState()
         const validate =()=>{
             if(!localStorage.getItem('user')){
                 navigate('/Signin')
@@ -34,6 +35,9 @@ function Udash(){
                       
             }   
         }
+        setTimeout(() => {
+            setM(<Membership/>)
+        }, 1500);
     //Membership cheak end
 
     //calling function
@@ -57,6 +61,7 @@ function Udash(){
      <div className="row w-100 px-5 py-2 justify-content-center">
      <h2 className='text-center py-2'>Welcome,  {localStorage.getItem('username')}</h2>
           {/* Valid membership giving */}
+
          {st && st!='e'?
             (st=='N'?
                <Pending/>:(st=='A' ?  
@@ -64,7 +69,7 @@ function Udash(){
                       <><button onClick={()=>setX(!x)} className='swapwv'> View Today Workout</button> <Workout/></>
                         :<><button onClick={()=>setX(!x)} className='swapwv'>Add Workout</button><Viewworkout/></>)      
                         :"Something went wrong"))
-                        :<Membership/>} 
+                        :m} 
         
           {/* valid type membership giving */}
      </div>  
