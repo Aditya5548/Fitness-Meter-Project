@@ -43,13 +43,13 @@ function Home(){
                  Stay On Track.
                 </h1>
                 <p>Easily track your Workouts, set Training Plans, and discover new Workout Routines to crush your goals</p>
-                <button className='bg-black text-light px-5 py-2'>Get Start</button>
+                <button className='bg-black text-light px-3 py-2'> <a className="nav-link bg-black text-light" href="/Signup">GET STARTED</a></button>
                 </center>
             </div>
 
             </div>
 
-            <div className="row my-5 w-100">
+            <div className="row my-3 w-100">
                 <div className="col-md-6 mx-auto p-1 rounded-1 d-flex">
                     <img src={pic3} alt="" className='w-75'/>
                 <div />
@@ -63,15 +63,8 @@ function Home(){
                     </center>
                 </div>
             </div>
-            <div className="row text-center py-5">
-                <div className="col-sm-12 ">
-                    <h1>Push your limit</h1>
-                    <p>Hit milestones and PR’s by taking on 
-                        <br />a new challenge every month.</p>
-                        <button className='btn btn-dark '>Join a Challenge</button>
-                </div>
-            </div>
-            <div className="row justify-content-center py-10">
+
+            <div className="row justify-content-center py-3">
                 <div className="col-md-5 my-auto">
                 <h1>Built To Make You Better</h1><br />
                  <h2>Smarter Training</h2>
