@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import SidebarUser from '../Elements/SidebarUser';
 import { useNavigate } from 'react-router-dom'
 import qr from '../assets/payment.jpg'
 function Getmem(){
@@ -11,12 +12,12 @@ function Getmem(){
     var [Gender,setGender]=useState("")
     var [mtype,setMtype]=useState(3)
     var [tid,setTid]=useState("")
-    var [weight, setWeight]=useState("")
+    var [Weight, setWeight]=useState("")
 
 
     let regcode=async (e)=>{
         e.preventDefault()
-        const user={amt,Number,Email,age,weight,Gender,mtype,tid}
+        const user={amt,Number,Email,age,Weight,Gender,mtype,tid}
         console.log(user)
         
         var response=await fetch('https://fitness-meter.onrender.com/mport',{
@@ -60,8 +61,17 @@ function Getmem(){
 
     return(
         <>
-        <div  className="row my-2 mx-1">
-        <div  className="col-sm-6 text-center mx-auto py-5">
+        <SidebarUser />
+     <div className="adminlogout">
+        <div>
+        <button class="btn btn-danger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">≡</button>
+        </div>
+        <div>
+          <button className="btnset2" onClick={()=>{localStorage.removeItem('user') ,localStorage.removeItem('username') ,navigate('/Signin')}}>Logout</button>
+        </div>
+     </div>
+        <div  className="row  mx-1">
+        <div  className="col-sm-6 text-center mx-auto py-4">
         <form action="" onSubmit={regcode} >
             <h2 className='fw-bold '>Get Membership</h2> 
     
@@ -73,7 +83,7 @@ function Getmem(){
                 <br />
                 <input type="number" placeholder="Enter Age"value={age} onChange={(e)=>{setAge(e.target.value)}} className='w-75 text-start shadow-lg workoutname'/>
                 <br />
-                <input type="number" placeholder="Enter Weight" value={weight} onChange={(e)=>{setWeight(e.target.value)}} className='w-75 text-start shadow-lg workoutname'/>
+                <input type="number" placeholder="Enter Weight" value={Weight} onChange={(e)=>{setWeight(e.target.value)}} className='w-75 text-start shadow-lg workoutname'/>
                 <br />
                 <select value={Gender} onChange={(e)=>{setGender(e.target.value)}}   className='w-75 text-start shadow-lg workoutname'>
                     <option value="">Select Gender</option>
