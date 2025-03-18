@@ -42,7 +42,8 @@ function Home(){
                 Log Workouts. <br />
                  Stay On Track.
                 </h1>
-                <p>Easily track your Workouts, set Training Plans, and discover new Workout Routines to crush your goals</p>
+                <p>Easily track your Workouts,<br/> set Training Plans,<br/> 
+                & discover new Workout Routines to crush your goals</p>
                 <button className='bg-black text-light px-3 py-2'> <a className="nav-link bg-black text-light" href="/Signup">GET STARTED</a></button>
                 </center>
             </div>
@@ -64,7 +65,7 @@ function Home(){
                 </div>
             </div>
 
-            <div className="row justify-content-center py-3">
+            <div className="row justify-content-center py-3 px-4">
                 <div className="col-md-5 my-auto">
                 <h1>Built To Make You Better</h1><br />
                  <h2>Smarter Training</h2>
