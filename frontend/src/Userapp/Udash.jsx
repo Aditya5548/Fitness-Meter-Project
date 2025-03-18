@@ -37,7 +37,7 @@ function Udash(){
         }
         setTimeout(() => {
             setM(<Membership/>)
-        }, 1100);
+        }, 2000);
     //Membership cheak end
 
     //calling function
