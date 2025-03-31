@@ -7,11 +7,12 @@ import {useGSAP} from '@gsap/react'
 function Navbar(){
   const [u,setU]=useState("")
   const [p,setP]=useState("")
+  const [un,setUN]=useState("")
   const navigate=useNavigate()
-  const x=localStorage.getItem('username')
-  console.log(x)
+  console.log(un)
   useEffect(()=>{setU(localStorage.getItem('user'))})
   useEffect(()=>{setP(localStorage.getItem('Admin'))})
+  useEffect(()=>{setUN(localStorage.getItem('username'))})
     return (
         <>
 
@@ -37,7 +38,7 @@ function Navbar(){
                     <a className="nav-link" href="/Contactall">CONTACT</a>
                 </li>
                 {
-                  x==null
+                  un==null
                   ?
                 <>
                 <li className="nav-item loginsignup"><a className="nav-link" href="/SigninDash">LOGIN</a></li>
@@ -46,7 +47,7 @@ function Navbar(){
                  :
                  <>
                 <div className="dropdown">
-                   <button className="btn btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">{x}</button>
+                   <button className="btn btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">{un}</button>
                    <ul className="dropdown-menu loginsign">
                       <li><button className="dropdown-item loginsignin" onClick={()=>{navigate('/Userdash')}}>Dashboard</button></li>
                       <li><button className="dropdown-item loginsignin" onClick={()=>{localStorage.removeItem('user'),localStorage.removeItem('username'),navigate('/Signin')}}>Logout</button></li>
