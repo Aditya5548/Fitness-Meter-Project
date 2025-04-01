@@ -55,7 +55,7 @@ function Signup(){
     }
     let otpver=async (e)=>{
         e.preventDefault()
-        var response=await fetch('http://fitness-meter.onrender.com/otpverification',{
+        var response=await fetch('https://fitness-meter.onrender.com/otpverification',{
             method:'POST',
             body:JSON.stringify({Email}),
             headers:{
@@ -101,14 +101,14 @@ function Signup(){
             <span className='text-danger'><h4>{msg}</h4></span>
                 <input type="name" value={Name} onChange={(e)=>{setName(e.target.value)}}   placeholder='Enter Name' className='w-75 text-start shadow-lg workoutname'/>
                 <br /><br />  
-                <div className="input-group w-75 text-start mx-auto shadow-lg workoutname">
+                <div className="input-group w-75 text-start mx-auto shadow-lg">
                 <input type="email" id="email" value={Email} onChange={(e)=>{setEmail(e.target.value)}}  placeholder='Enter Email' className='form-control sendotp' disabled={disable1==="yes"}/>
                     <div className="input-group-append">
                         <button className='input-group-text sendotp' onClick={otpver} disabled={disable1==="yes"}>Send OTP</button>
                     </div>
                 </div>
                 <br />
-                <div className="input-group w-75 text-start mx-auto shadow-lg workoutname">
+                <div className="input-group w-75 text-start mx-auto shadow-lg">
                 <input type="text"  value={otp} onChange={(e)=>{setOTP(e.target.value)}}  placeholder='Enter OTP' className='form-control sendotp' disabled={disable2==="yes"}/>
                     <div className="input-group-append">
                         <button className='input-group-text sendotp' onClick={cheak} disabled={disable2==="yes"}>Verify</button>
@@ -116,7 +116,7 @@ function Signup(){
                 </div><br />
                 <input type="number" id="number" value={Number} onChange={(e)=>{setNumber(e.target.value)}} placeholder='Enter Number' className='w-75 text-start shadow-lg workoutname'/>
                 <br /><br />
-                <input type="date" id="date" value={Dob} onChange={(e)=>{setDob(e.target.value)}} className='w-75 text-start shadow-lg workoutname'/>
+                <input type="date" id="date" value={Dob} onChange={(e)=>{setDob(e.target.value)}} placeholder="dob" className='w-75 text-start shadow-lg workoutname'/>
                 <br /><br/>
                 <select name="" id="gender"  value={Gender} onChange={(e)=>{setGender(e.target.value)}} className='w-75 text-start shadow-lg workoutname'>
                     <option value="">Select Gender</option>
