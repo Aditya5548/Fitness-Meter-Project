@@ -30,7 +30,7 @@ function Signup(){
         })
         const d=await response.json()
         console.log(d)
-        if(d.msg){
+        if(d.msg=="All field required"){
             setMsg(d.msg)
             window.alert(d.msg)
             setName("")
@@ -43,6 +43,7 @@ function Signup(){
         }
         else{
             window.alert(d.msg)
+            setMsg(d.msg)
             setName("")
             setNumber("")
             setDISABLE1("")
