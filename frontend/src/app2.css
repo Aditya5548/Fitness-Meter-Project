@@ -42,6 +42,9 @@
     height: 50px;
     border: solid gainsboro;
 }
+.sendotp{
+    height: 45px;
+}
 .workoutnameinput{
     background-color: white;
     border: solid gainsboro;

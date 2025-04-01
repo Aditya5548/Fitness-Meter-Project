@@ -58,8 +58,8 @@ function Signin(){
         <Navbar />
         </div>
         <br /><br />
-        <div className="row my-5 ">
-            <div className="col-sm-6 col-md-6 col-lg-4 text-center mx-auto signinbg">
+        <div className="row my-5 mx-3">
+            <div className="col-sm-6 col-md-6 col-lg-4 text-center mx-auto signinbg ">
                <h2 className='fw-bold '>Log in</h2> 
                <p className='small'>Don't Have an account.<a href="/Signup">Signup</a></p>
                <form action=""  onSubmit={logcode} >

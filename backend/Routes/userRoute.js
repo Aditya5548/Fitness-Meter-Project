@@ -92,6 +92,29 @@ userRoute.post('/userlog',async(req,res)=>{
     }
 })
 
+
+userRoute.post('/otpverification',async(req,res)=>{
+    const body=req.body
+    console.log(body)
+    try{
+        if(!body.Email)
+            {res.status(400).json({"msg":"Please First Enter Email ID"})}
+            else{
+                let random=Math.floor(Math.random() * 99999)+10000;
+                console.log(random)
+                //sending Verification mail
+                var sub=`Your Verication code for Registration on Fitness-Meter: ${random}`
+               main(body.Email,"Registration on Fitness-Meter",sub)
+                //received to user before msg==success
+                res.status(400).json({"msg":"OTP Send Successfully..","code":random})      
+            }
+    }
+    catch(e){
+        console.log("Error",e.errmsg)
+        res.json({'msg':e.errmsg})
+    }
+})
+
 userRoute.get('/user/:id',async(req,res)=>{
     const userID=req.params.id
     const user=await userModel.find({userID})
