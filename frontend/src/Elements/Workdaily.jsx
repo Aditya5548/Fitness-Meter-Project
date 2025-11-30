@@ -32,23 +32,23 @@ function Workdaily(){
     var Benchcburn=[]
     const Viewall=async ()=>{
         //push-up
-        const pushupdata=await fetch(`https://fitness-meter.onrender.com/Wbydate/${localStorage.getItem('user')}/Push-Up`);
+        const pushupdata=await fetch(`${import.meta.env.VITE_URL}/Wbydate/${localStorage.getItem('user')}/Push-Up`);
         const result1= await pushupdata.json();
 
         //pull-up
-        const pullup=await fetch(`https://fitness-meter.onrender.com/Wbydate/${localStorage.getItem('user')}/Pull-Up`);
+        const pullup=await fetch(`${import.meta.env.VITE_URL}/Wbydate/${localStorage.getItem('user')}/Pull-Up`);
         const result2= await pullup.json();
 
         //pull-up
-        const Hamercut=await fetch(`https://fitness-meter.onrender.com/Wbydate/${localStorage.getItem('user')}/Hamercut`);
+        const Hamercut=await fetch(`${import.meta.env.VITE_URL}/Wbydate/${localStorage.getItem('user')}/Hamercut`);
         const result3= await Hamercut.json();
 
         //situp
-        const situp=await fetch(`https://fitness-meter.onrender.com/Wbydate/${localStorage.getItem('user')}/Situp`);
+        const situp=await fetch(`${import.meta.env.VITE_URL}/Wbydate/${localStorage.getItem('user')}/Situp`);
         const result4= await situp.json();
         
         //Bench Press
-        const Benchpress=await fetch(`https://fitness-meter.onrender.com/Wbydate/${localStorage.getItem('user')}/Bench-press`);
+        const Benchpress=await fetch(`${import.meta.env.VITE_URL}/Wbydate/${localStorage.getItem('user')}/Bench-press`);
         const result5= await Benchpress.json();
 
 

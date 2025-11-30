@@ -9,7 +9,7 @@ function Viewuser(){
     
     const Viewall=async ()=>{
 
-        const response=await fetch('https://fitness-meter.onrender.com/user');
+        const response=await fetch(`${import.meta.env.VITE_URL}/user`);
         const result= await response.json();
         if(response.ok){
             setData(result)
@@ -38,7 +38,7 @@ function edit(id){
 const userdel=async(id)=>{
     console.log(id)
     var usersdata ={id}
-    var response=await fetch('https://fitness-meter.onrender.com/deleteuser',{
+    var response=await fetch(`${import.meta.env.VITE_URL}/deleteuser`,{
         method:"DELETE",
         headers:{"Content-Type":"application/json",
         },

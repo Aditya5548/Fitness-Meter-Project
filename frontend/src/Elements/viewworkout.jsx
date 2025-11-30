@@ -10,7 +10,7 @@ function Viewworkout(){
     
     const Viewall=async ()=>{
 
-        const response=await fetch(`https://fitness-meter.onrender.com/Workoutdata/${localStorage.getItem('user')}`);
+        const response=await fetch(`${import.meta.env.VITE_URL}/Workoutdata/${localStorage.getItem('user')}`);
         const result= await response.json();
         if(response.ok){
             setData(result.user)

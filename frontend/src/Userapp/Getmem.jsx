@@ -20,7 +20,7 @@ function Getmem(){
         const user={amt,Number,Email,age,Weight,Gender,mtype,tid}
         console.log(user)
         
-        var response=await fetch('https://fitness-meter.onrender.com/mport',{
+        var response=await fetch(`${import.meta.env.VITE_URL}/mport`,{
             method:'POST',
             body:JSON.stringify(user),
             headers:{

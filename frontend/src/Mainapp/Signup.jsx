@@ -21,7 +21,7 @@ function Signup(){
         e.preventDefault()
         const user={Name,Number,Email,Password,Dob,Gender,Country}
         console.log(user)
-        var response=await fetch('https://fitness-meter.onrender.com/user',{
+        var response=await fetch(`${import.meta.env.VITE_URL}/user`,{
             method:'POST',
             body:JSON.stringify(user),
             headers:{
@@ -59,7 +59,7 @@ function Signup(){
     }
     let otpver=async (e)=>{
         e.preventDefault()
-        var response=await fetch('https://fitness-meter.onrender.com/otpverification',{
+        var response=await fetch(`${import.meta.env.VITE_URL}/otpverification`,{
             method:'POST',
             body:JSON.stringify({Email}),
             headers:{

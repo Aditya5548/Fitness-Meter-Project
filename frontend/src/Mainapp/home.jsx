@@ -30,10 +30,9 @@ function Home(){
       })
     
     return (
-        <>
+        <div className='w-100'>
         <Navbar/>
         <Slider/>
-
         <div className="row my-5 justify-content-center">
             <div className="col-md-4">
                 <center>
@@ -90,7 +89,7 @@ function Home(){
             <p>Email: Adityakumar9377@gmail.com</p>
             </div>
         </div>
-        </>
+        </div>
         
     );
 }

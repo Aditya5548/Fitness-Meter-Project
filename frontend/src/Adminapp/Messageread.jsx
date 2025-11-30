@@ -13,7 +13,7 @@ function Messageread(){
     
     const Viewall=async ()=>{
 
-        const response=await fetch('https://fitness-meter.onrender.com/contactdata');
+        const response=await fetch(`${import.meta.env.VITE_URL}/contactdata`);
         const result= await response.json();
         if(response.ok){
             setData(result)

@@ -10,7 +10,7 @@ function WComplete(){
     
     const Viewall=async ()=>{
 
-        const response=await fetch('https://fitness-meter.onrender.com/Workoutdata');
+        const response=await fetch(`${import.meta.env.VITE_URL}/Workoutdata`);
         const result= await response.json();
         if(response.ok){
             setData(result.user)

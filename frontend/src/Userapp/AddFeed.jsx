@@ -14,7 +14,7 @@ function Addfeed(){
             e.preventDefault()
             const user={Name,Email,message,type}
             console.log(user)
-            var response=await fetch('https://fitness-meter.onrender.com/feed',{
+            var response=await fetch(`${import.meta.env.VITE_URL}/feed`,{
                 method:'POST',
                 body:JSON.stringify(user),
                 headers:{

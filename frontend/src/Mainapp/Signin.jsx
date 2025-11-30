@@ -25,7 +25,7 @@ function Signin(){
         e.preventDefault()
         const user={email,password}
         console.log(user)
-        var response=await fetch('https://fitness-meter.onrender.com/userlog',{
+        var response=await fetch(`${import.meta.env.VITE_URL}/userlog`,{
             method:'POST',
             body:JSON.stringify(user),
             headers:{
@@ -44,7 +44,6 @@ function Signin(){
         }
         else{
             setMsg(d.msg)
-            window.alert(d.msg)
             setEmail("")
             setPassword("")
          }
@@ -66,9 +65,9 @@ function Signin(){
 
                <span className='text-danger'><h4>{msg}</h4></span>
                <br />
-                <input type="email" id="name" placeholder='Enter Email'  value={email} onChange={(e)=>{setEmail(e.target.value)}}  className='w-75 shadow-lg workoutname'/>
+                <input type="email" id="name" placeholder='Enter Email'  value={email} onChange={(e)=>{setEmail(e.target.value)}}  className='w-75 shadow-lg workoutname' required/>
                 <br /><br />
-                <input type="password" id="pass"  placeholder='Enter Passward' value={password} onChange={(e)=>{setPassword(e.target.value)}}   className='w-75 shadow-lg workoutname'/>
+                <input type="password" id="pass"  placeholder='Enter Passward' value={password} onChange={(e)=>{setPassword(e.target.value)}}   className='w-75 shadow-lg workoutname' required/>
                 <br /><br />
                 <p><a href="">Forgot Passward</a></p>
                 <input type="submit" value="LOGIN" className="btnview"/>

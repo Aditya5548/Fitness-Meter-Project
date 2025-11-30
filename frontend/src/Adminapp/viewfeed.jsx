@@ -9,7 +9,7 @@ function Viewfeed(){
     
     const Viewall=async ()=>{
 
-        const response=await fetch('https://fitness-meter.onrender.com/feedback');
+        const response=await fetch(`${import.meta.env.VITE_URL}/feedback`);
         const result= await response.json();
         if(response.ok){
             setData(result)

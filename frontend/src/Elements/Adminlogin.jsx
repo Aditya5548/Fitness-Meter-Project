@@ -27,7 +27,7 @@ function Adminlogin(){
         e.preventDefault()
         const user={email,password}
         console.log(user)
-        var response=await fetch('https://fitness-meter.onrender.com/Adminlog',{
+        var response=await fetch(`${import.meta.env.VITE_URL}/Adminlog`,{
             method:'POST',
             body:JSON.stringify(user),
             headers:{

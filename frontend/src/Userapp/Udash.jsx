@@ -25,7 +25,7 @@ function Udash(){
 
     //membership cheak start
         const cheakmemship=async()=>{
-            var response=await fetch(`https://fitness-meter.onrender.com/mport/${localStorage.getItem('user')}`)
+            var response=await fetch(`${import.meta.env.VITE_URL}/mport/${localStorage.getItem('user')}`)
             const data =await response.json()
             if (data.msg=="user found"){
                 console.log(data.res.Pstatus)
