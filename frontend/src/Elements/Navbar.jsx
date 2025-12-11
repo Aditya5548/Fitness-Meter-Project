@@ -9,7 +9,6 @@ function Navbar(){
   const [p,setP]=useState("")
   const [un,setUN]=useState("")
   const navigate=useNavigate()
-  console.log(un)
   useEffect(()=>{setU(localStorage.getItem('user'))})
   useEffect(()=>{setP(localStorage.getItem('Admin'))})
   useEffect(()=>{setUN(localStorage.getItem('username'))})

@@ -12,11 +12,8 @@ mRoute.use(express.json())
 mRoute.get('/mport/:id',async(req,res)=>{
     const id=req.params.id
     const result=await usermodel.findById(id)
-    console.log(result)
     const Email=result.email
-    console.log(Email)
     const result2= await mmodel.findOne({Email})
-    console.log(result2)
 
     if(result==null){
         
@@ -29,7 +26,6 @@ mRoute.get('/mport/:id',async(req,res)=>{
 
 mRoute.post('/mport',async(req,res)=>{
     const body=req.body
-    console.log(body)
     try{
         if(!body || !body.Number || body.Email || body.age || body.Weight || body.Gender || body.mtype || body.tid)
             {res.status(400).json({"msg":"All field required"})}
@@ -58,9 +54,7 @@ mRoute.post('/mport',async(req,res)=>{
             const today = new Date();
             const daysToSubtract = (Number(body.mtype)*30);
             const pastDate = getPreviousDate(today, daysToSubtract);
-            console.log(`Today's date: ${today.toLocaleDateString()}`);
-            console.log(`Date ${daysToSubtract} days ago: ${pastDate}`);
-            //data calculation start 
+
 
                 const result =await mmodel.create({
                     Email:body.Email,
@@ -80,7 +74,6 @@ mRoute.post('/mport',async(req,res)=>{
             }
     }
     catch(e){
-        console.log("Error",e.errmsg)
         res.json({'msg':e.errmsg})
     }
 })
@@ -88,7 +81,6 @@ mRoute.post('/mport',async(req,res)=>{
 
 mRoute.get('/Membershipdata',async(req,res)=>{
     const user=await mmodel.find().sort({start:-1})
-    console.log(user)
     if(user==""){
         return res.send({msg:"Not Data Found",user})
     }
@@ -102,7 +94,6 @@ mRoute.get('/Membershipdata',async(req,res)=>{
 mRoute.patch('/Membershipdata/:id/:s',async(req,res)=>{
     const id=req.params.id
     const s=req.params.s
-    console.log(s,id)
     try{
        const result =await mmodel.findByIdAndUpdate(id,{Pstatus:s})
 
@@ -110,7 +101,6 @@ mRoute.patch('/Membershipdata/:id/:s',async(req,res)=>{
         }
 
     catch(e){
-        console.log("Error",e.errmsg)
         res.json({'msg':e.errmsg})
     }
 })

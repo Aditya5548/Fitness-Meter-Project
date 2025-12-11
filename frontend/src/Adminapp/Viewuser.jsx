@@ -13,7 +13,6 @@ function Viewuser(){
         const result= await response.json();
         if(response.ok){
             setData(result)
-            console.log(result)
         }
             
         else{
@@ -36,7 +35,6 @@ function edit(id){
         navigate('/UserProfileEditbyAdmiin')
 }
 const userdel=async(id)=>{
-    console.log(id)
     var usersdata ={id}
     var response=await fetch(`${import.meta.env.VITE_URL}/deleteuser`,{
         method:"DELETE",

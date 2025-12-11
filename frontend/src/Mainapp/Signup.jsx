@@ -20,7 +20,6 @@ function Signup(){
     let regcode=async (e)=>{
         e.preventDefault()
         const user={Name,Number,Email,Password,Dob,Gender,Country}
-        console.log(user)
         var response=await fetch(`${import.meta.env.VITE_URL}/user`,{
             method:'POST',
             body:JSON.stringify(user),
@@ -29,7 +28,6 @@ function Signup(){
             }  
         })
         const d=await response.json()
-        console.log(d)
         if(d.msg=="All field required"){
             setMsg(d.msg)
             window.alert(d.msg)
@@ -67,7 +65,6 @@ function Signup(){
             }  
         })
         const d=await response.json()
-        console.log(d)
         if(d.msg=="Please First Enter Email ID"){
             setMsg(d.msg)
         }

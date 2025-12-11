@@ -13,7 +13,6 @@ feedRoute.get('/Feedback',async(req,res)=>{
 
 feedRoute.post('/feed',async(req,res)=>{
     const body=req.body
-    console.log(body)
     try{
         if(!body ||!body.Name ||!body.Email || !body.message)
             {res.status(400).json({"msg":"All field required"})}
@@ -22,7 +21,6 @@ feedRoute.post('/feed',async(req,res)=>{
             else{
                 var d=Date.now()
                 var starting=new Date()
-                console.log(starting)
                 const result =await feedModel.create({
                     Datetime:starting,
                     name:body.Name,
@@ -34,7 +32,6 @@ feedRoute.post('/feed',async(req,res)=>{
             }
     }
     catch(e){
-        console.log("Error",e.errmsg)
         res.json({'msg':e.errmsg})
     }
 })

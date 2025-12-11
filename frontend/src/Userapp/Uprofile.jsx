@@ -14,7 +14,6 @@ function Uprofile(){
     const Viewall=async ()=>{
         const response=await fetch(`${import.meta.env.VITE_URL}/user/${id}`);
         const result= await response.json();
-        console.log(result)
         
         if(response.ok){
             setData(result)

@@ -21,7 +21,6 @@ function Profileedit(){
     let getdata=async()=>{
         const response=await fetch(`${import.meta.env.VITE_URL}/user/${localStorage.getItem('user')}`);
         const result= await response.json();
-        console.log(result)
         setName(result.name)
         setNumber(result.number)
         setEmail(result.email)
@@ -40,7 +39,6 @@ function Profileedit(){
             body:JSON.stringify(user)
         })
         const result=await response.json();
-        console.log(result)
         if(result.msg=="updated Successfully..."){
             setMsg(result.msg)
             setName("")

@@ -17,7 +17,6 @@ function viewmembership(){
         const result= await response.json();
         if(response.ok){
             setData(result.user)
-            console.log(result.user)
             setMsg(result.msg)
 
         }
@@ -35,7 +34,6 @@ function viewmembership(){
             s='N'
 
         }
-        console.log(s)
         const response=await fetch(`${import.meta.env.VITE_URL}/Membershipdata/${id}/${s}`,{
             method:'PATCH',
             headers:{'Content-Type':'application/json'},

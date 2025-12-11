@@ -38,7 +38,6 @@ wcRoute.get('/Workoutdata/:id',async(req,res)=>{
 wcRoute.get('/Wcalc/:id/:s',async(req,res)=>{
     const userID=req.params.id
     const wname=req.params.s
-    console.log(userID,wname)
     const user=await Workoutmodel.find({userID,wname})
     if(user==""){
         return res.send({msg:"Not Data Found",user})
@@ -84,10 +83,6 @@ wcRoute.get('/Wmonth/:id/:s',async(req,res)=>{
       const daysToSubtract = 30;
       const pastDate = getPreviousDate(today, daysToSubtract);
       
-      console.log(`Today's date: ${today.toLocaleDateString()}`);
-      console.log(`Date ${daysToSubtract} days ago: ${pastDate}`);
-      const wdate=pastDate
-    //data calculation start 
     const userID=req.params.id
     const wname=req.params.s
     const user=await Workoutmodel.find({userID,wdate:{$gte:pastDate},wname})

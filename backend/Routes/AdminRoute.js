@@ -18,7 +18,6 @@ AdminRoute.get('/aduser/:id',async(req,res)=>{
         return res.send(result)
     }
     catch(e){
-        console.log("error",e.errmsg)
         res.json({'msg':e.errmsg})
     }
  })
@@ -30,7 +29,6 @@ AdminRoute.use(express.json())
 
 AdminRoute.post('/Admin',async(req,res)=>{
     const body=req.body
-    console.log(body)
     try{
         if(!body)
             {res.status(400).json({"msg":"All field required"})}
@@ -40,17 +38,14 @@ AdminRoute.post('/Admin',async(req,res)=>{
             }
     }
     catch(e){
-        console.log("Error",e.errmsg)
         res.json({'msg':e.errmsg})
     }
 })
 
 AdminRoute.post('/Adminlog',async(req,res)=>{
     const {email ,password}=req.body
-    console.log(email,password)
     try{
         const result =await userModel2.findOne({email})
-        console.log(result)
         if(result){
             if(result.password==password)
                 {res.json({msg:"Login Success..",id:result._id,name:result.name})}
@@ -64,7 +59,6 @@ AdminRoute.post('/Adminlog',async(req,res)=>{
         }
     }
     catch(e){
-        console.log("Error",e.errmsg)
         res.json({'msg':e.errmsg})
     }
 })
@@ -76,7 +70,6 @@ AdminRoute.get('/contactdata',async(req,res)=>{
         return res.send(result)
     }
     catch(e){
-        console.log("error",e.errmsg)
         res.json({'msg':e.errmsg})
     }})
 

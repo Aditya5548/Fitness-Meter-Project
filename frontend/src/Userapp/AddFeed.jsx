@@ -13,7 +13,6 @@ function Addfeed(){
         let regcode=async (e)=>{
             e.preventDefault()
             const user={Name,Email,message,type}
-            console.log(user)
             var response=await fetch(`${import.meta.env.VITE_URL}/feed`,{
                 method:'POST',
                 body:JSON.stringify(user),
@@ -22,7 +21,6 @@ function Addfeed(){
                 }  
             })
             const d=await response.json()
-            console.log(d)
             if(d.msg){
                 setMsg(d.msg)
                 setName("")

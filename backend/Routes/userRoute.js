@@ -13,7 +13,6 @@ userRoute.get('/user',async(req,res)=>{
         return res.send(result)
     }
     catch(e){
-        console.log("error",e.errmsg)
         res.json({'msg':e.errmsg})
     }})
 
@@ -24,7 +23,6 @@ userRoute.get('/user/:id',async(req,res)=>{
         return res.send(result)
     }
     catch(e){
-        console.log("error",e.errmsg)
         res.json({'msg':e.errmsg})
     }
  })
@@ -36,7 +34,6 @@ userRoute.use(express.urlencoded({extended:false}))
 userRoute.use(express.json())
 userRoute.post('/user',async(req,res)=>{
     const body=req.body
-    console.log(body)
     try{
         if(!body ||!body.Name || !body.Number || !body.Email || !body.Password)
             {res.status(400).json({"msg":"All field required"})}
@@ -62,7 +59,6 @@ userRoute.post('/user',async(req,res)=>{
             }
     }
     catch(e){
-        console.log("Error",e.errmsg)
         res.json({'msg':e.errmsg})
     }
 })
@@ -70,10 +66,8 @@ userRoute.post('/user',async(req,res)=>{
 
 userRoute.post('/userlog',async(req,res)=>{
     const {email ,password}=req.body
-    console.log(email,password)
     try{
         const result =await userModel.findOne({email})
-        console.log(result)
         if(result){
             if(result.password==password)
                 {res.json({msg:"Login Success..",id:result._id,name:result.name})}
@@ -87,7 +81,6 @@ userRoute.post('/userlog',async(req,res)=>{
         }
     }
     catch(e){
-        console.log("Error",e.errmsg)
         res.json({'msg':e.errmsg})
     }
 })
@@ -95,22 +88,19 @@ userRoute.post('/userlog',async(req,res)=>{
 
 userRoute.post('/otpverification',async(req,res)=>{
     const body=req.body
-    console.log(body)
     try{
         if(!body.Email)
             {res.status(400).json({"msg":"Please First Enter Email ID"})}
             else{
                 let random=Math.floor(Math.random() * 99999)+10000;
-                console.log(random)
                 //sending Verification mail
                 var sub=`Your Verication code for Registration on Fitness-Meter: ${random}`
                main(body.Email,"Registration on Fitness-Meter",sub)
                 //received to user before msg==success
-                res.status(400).json({"msg":"OTP Send Successfully..","code":random})      
+                res.status(400).json({"msg":"OTP Send Successfully.."})      
             }
     }
     catch(e){
-        console.log("Error",e.errmsg)
         res.json({'msg':e.errmsg})
     }
 })
@@ -124,8 +114,6 @@ userRoute.get('/user/:id',async(req,res)=>{
 userRoute.patch('/user/:id',async(req,res)=>{
     const id=req.params.id
     const body=req.body
-    console.log(body)
-    console.log(id)
     try{if(!body ||!body.Name || !body.Number || !body.Email || !body.Password || !body.Gender|| !body.Password || !body.Country )
                {res.status(400).json({"msg":"All field required"})}
         else{const result =await userModel.findByIdAndUpdate(id,{
@@ -140,7 +128,6 @@ userRoute.patch('/user/:id',async(req,res)=>{
         return res.status(200).json({"msg":"updated Successfully..."})
         }}
     catch(e){
-        console.log("Error",e.errmsg)
         res.json({'msg':e.errmsg})
     }
 })
@@ -163,7 +150,6 @@ userRoute.delete('/deleteuser', async(req,res)=>{
 
 userRoute.post('/wroute',async(req,res)=>{
     const body=req.body
-    console.log(body)
     try{
         if(!body || !body.uid || !body.duration || !body.sets || !body.repl || !body.sets || !body.wcategory || !body.cburn)
             {res.status(400).json({"msg":"All field required"})}
@@ -186,7 +172,6 @@ userRoute.post('/wroute',async(req,res)=>{
             }
     }
     catch(e){
-        console.log("Error",e.errmsg)
         res.json({'msg':e.errmsg})
     }
 })
@@ -194,13 +179,12 @@ userRoute.post('/wroute',async(req,res)=>{
 
 userRoute.post('/contact',async(req,res)=>{
     const body=req.body
-    console.log(body)
+
     try{
         if(!body || !body.name || !body.email || !body.topic || !body.message)
             {res.status(400).json({"msg":"All field required"})}
             else{
                 const result =await contact.create(body)
-                console.log(body.email)
                 var sub=`hi,<b>${body.name}</b><br/> Thank you for Contacting Us <br/> We Will Respond Soon For Your Message.
                 <br/>
                 <b>Topic: </b>${body.topic}
@@ -215,7 +199,6 @@ userRoute.post('/contact',async(req,res)=>{
             }
     }
     catch(e){
-        console.log("Error",e.errmsg)
         res.json({'msg':e.errmsg})
     }
 })

@@ -17,7 +17,6 @@ function Messageread(){
         const result= await response.json();
         if(response.ok){
             setData(result)
-            console.log(result)
             setMsg(result.msg)
 
         }

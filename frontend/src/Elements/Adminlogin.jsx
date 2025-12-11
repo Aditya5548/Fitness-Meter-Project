@@ -26,7 +26,6 @@ function Adminlogin(){
     const logcode =async(e)=>{
         e.preventDefault()
         const user={email,password}
-        console.log(user)
         var response=await fetch(`${import.meta.env.VITE_URL}/Adminlog`,{
             method:'POST',
             body:JSON.stringify(user),
@@ -35,7 +34,6 @@ function Adminlogin(){
             }  
         })
         const d=await response.json()
-        console.log(d)
         if(d.msg=="Login Success.."){
             setMsg("Login Successs")
             setEmail("")

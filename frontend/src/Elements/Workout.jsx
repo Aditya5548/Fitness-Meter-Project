@@ -16,7 +16,6 @@ function Workout(){
     let regcode=async (e)=>{
         e.preventDefault()
         const user={wname,duration,sets,repl,wcategory,cburn,uid}
-        console.log(user)
         var response=await fetch(`${import.meta.env.VITE_URL}/wroute`,{
             method:'POST',
             body:JSON.stringify(user),
@@ -25,7 +24,6 @@ function Workout(){
             }  
         })
         const d=await response.json()
-        console.log(d)
         if(d.msg){
             setMsg(d.msg)
             window.alert(d.msg)

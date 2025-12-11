@@ -17,9 +17,7 @@ function Getmem(){
 
     let regcode=async (e)=>{
         e.preventDefault()
-        const user={amt,Number,Email,age,Weight,Gender,mtype,tid}
-        console.log(user)
-        
+        const user={amt,Number,Email,age,Weight,Gender,mtype,tid}  
         var response=await fetch(`${import.meta.env.VITE_URL}/mport`,{
             method:'POST',
             body:JSON.stringify(user),
@@ -28,7 +26,6 @@ function Getmem(){
             }  
         })
         const d=await response.json()
-        console.log(d)
         if(d.msg=="Membership Registration will be Update 3-4 Hour"){
             window.alert("Membership Registration Success")
             setMsg(d.msg)

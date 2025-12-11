@@ -14,7 +14,6 @@ function Viewworkout(){
         const result= await response.json();
         if(response.ok){
             setData(result.user)
-            console.log(result.user)
             setMsg(result.msg)
         }
     }

@@ -28,7 +28,6 @@ function Udash(){
             var response=await fetch(`${import.meta.env.VITE_URL}/mport/${localStorage.getItem('user')}`)
             const data =await response.json()
             if (data.msg=="user found"){
-                console.log(data.res.Pstatus)
                 setSt(data.res.Pstatus)
                 setStshow(data.res.mtype)
                 SetMvalid(data.res.end)
@@ -45,7 +44,6 @@ function Udash(){
             validate()
             cheakmemship()
         },[])   
-        console.log(st)
     //validation function
     return (
      <>

@@ -13,7 +13,6 @@ function Adprofile(){
     var ekuser=async()=>{
         var response=await fetch(`${import.meta.env.VITE_URL}/Aduser/${id}`)
         var result= await response.json()
-        console.log(result)
         if(response.ok)
         {
             setData(result)
